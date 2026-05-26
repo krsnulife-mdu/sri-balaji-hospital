@@ -1,780 +1,789 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Balaji Hospital | Best Multi-Speciality Hospital in Chennai</title>
-<meta name="description" content="Sri Balaji Hospital, Chennai's trusted multi-speciality hospital offering world-class care in Cardiology, Neurology, Orthopaedics, Gynaecology, Paediatrics, ENT, Dental and General Medicine.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sri Balaji Hospital, Chennai's trusted multi-speciality hospital at Purasawalkam offering world-class care in Cardiology, Neurology, Orthopaedics, Gynaecology, Oncology, Paediatrics, ENT and more." />
+  <title>Sri Balaji Hospital | Best Multi-Speciality Hospital in Chennai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #f5a800;
+      --gold-dark: #c8870a;
+      --navy: #1a2e52;
+      --navy-light: #243a68;
+      --white: #ffffff;
+      --off-white: #fdf9f3;
+      --text: #1c1c1c;
+      --text-muted: #5a5a5a;
+      --border: #e8e0d0;
+      --section-bg: #f7f3ec;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 4px 24px rgba(26,46,82,0.10);
+      --shadow-lg: 0 8px 40px rgba(26,46,82,0.14);
+    }
 
-  :root {
-    --navy: #0A2647;
-    --blue: #144272;
-    --mid: #205295;
-    --light: #2C74B3;
-    --accent: #E8871A;
-    --accent-light: #F5A94A;
-    --white: #ffffff;
-    --off-white: #F8FAFC;
-    --gray-light: #EEF2F7;
-    --gray-text: #64748B;
-    --text: #1A2940;
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', sans-serif;
-    --radius: 12px;
-    --radius-sm: 8px;
-  }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.65; font-size: 16px; }
 
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-body); color: var(--text); background: var(--white); font-size: 15px; line-height: 1.6; }
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 68px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-circle {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold); display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 18px; color: var(--navy); font-weight: bold;
+    }
+    .nav-brand-text { font-family: var(--font-display); font-size: 1.25rem; color: var(--white); line-height: 1.2; }
+    .nav-brand-text span { display: block; font-family: var(--font-body); font-size: 0.7rem; color: var(--gold); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 28px; align-items: center; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy); padding: 9px 22px; border-radius: 100px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none; white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: #e09700; transform: translateY(-1px); }
 
-  .topbar {
-    background: var(--navy);
-    padding: 8px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .topbar-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #93C6E0;
-    font-size: 12px;
-  }
-  .topbar-item svg { width: 13px; height: 13px; stroke: #E8871A; }
-  .topbar-item.emg { color: #F5A94A; font-weight: 500; }
-  .topbar-right { display: flex; gap: 20px; align-items: center; }
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--gold); padding: 7px 5%;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+      font-size: 0.82rem; font-weight: 600; color: var(--navy);
+    }
+    .topbar a { color: var(--navy); text-decoration: none; }
+    .topbar-right { display: flex; gap: 20px; flex-wrap: wrap; }
 
-  nav {
-    background: var(--white);
-    padding: 14px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #E2EAF4;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(10,38,71,0.08);
-  }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-text { display: flex; flex-direction: column; }
-  .logo-name { font-family: var(--font-display); font-size: 18px; color: var(--navy); font-weight: 600; line-height: 1.1; }
-  .logo-sub { font-size: 10px; color: var(--gray-text); letter-spacing: 1px; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 28px; align-items: center; list-style: none; }
-  .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--mid); }
-  .btn-appt {
-    background: var(--accent);
-    color: var(--white);
-    padding: 10px 22px;
-    border-radius: var(--radius-sm);
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.2s;
-    display: inline-flex; align-items: center; gap: 6px;
-  }
-  .btn-appt:hover { background: #D47615; }
-  .btn-appt svg { width: 14px; height: 14px; stroke: white; }
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3a6e 100%);
+      padding: 80px 5% 90px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; right: -80px; top: -80px;
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,168,0,0.12) 0%, transparent 70%);
+    }
+    .hero-inner { max-width: 680px; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,168,0,0.18); border: 1px solid rgba(245,168,0,0.35);
+      color: var(--gold); padding: 6px 16px; border-radius: 100px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--white); line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; max-width: 500px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy); padding: 14px 32px; border-radius: 100px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-block;
+      transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(245,168,0,0.4);
+    }
+    .btn-primary:hover { background: #e09700; transform: translateY(-2px); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.4); color: var(--white); padding: 14px 32px; border-radius: 100px;
+      font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(245,168,0,0.1); }
 
-  .hero {
-    background: var(--navy);
-    padding: 70px 40px 60px;
-    display: flex;
-    gap: 48px;
-    align-items: center;
-    min-height: 500px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: rgba(32,82,149,0.4);
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: 30%;
-    width: 250px; height: 250px;
-    border-radius: 50%;
-    background: rgba(44,116,179,0.2);
-  }
-  .hero-content { flex: 1; position: relative; z-index: 1; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(232,135,26,0.15);
-    border: 1px solid rgba(232,135,26,0.4);
-    color: var(--accent-light);
-    font-size: 11px;
-    padding: 5px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-  }
-  .hero-badge svg { width: 11px; height: 11px; stroke: var(--accent-light); }
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: 46px;
-    color: var(--white);
-    line-height: 1.15;
-    margin-bottom: 16px;
-    font-weight: 600;
-  }
-  .hero h1 span { color: var(--accent-light); }
-  .hero p { color: #93C6E0; font-size: 16px; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-    padding: 13px 28px;
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover { background: #D47615; }
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 1px solid rgba(255,255,255,0.35);
-    padding: 13px 28px;
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: border-color 0.2s;
-  }
-  .btn-secondary:hover { border-color: white; }
-  .btn-primary svg, .btn-secondary svg { width: 15px; height: 15px; stroke: currentColor; }
-  .hero-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 16px;
-    padding: 32px;
-    width: 300px;
-    flex-shrink: 0;
-    position: relative; z-index: 1;
-  }
-  .hero-card-title { color: #93C6E0; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
-  .hero-stat { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .hero-stat:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-  .hero-stat-num { font-family: var(--font-display); font-size: 32px; color: var(--white); font-weight: 600; }
-  .hero-stat-num span { font-size: 16px; color: var(--accent-light); }
-  .hero-stat-label { color: #7EB8D5; font-size: 12px; margin-top: 2px; }
+    .hero-stats {
+      margin-top: 56px; display: flex; gap: 40px; flex-wrap: wrap;
+      padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); line-height: 1; }
+    .hero-stat .lbl { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 4px; font-weight: 500; }
 
-  .quick { background: var(--blue); padding: 28px 40px; }
-  .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 800px; margin: 0 auto; }
-  .quick-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius);
-    padding: 18px 20px;
-    display: flex; align-items: center; gap: 14px;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-decoration: none;
-  }
-  .quick-card:hover { background: rgba(255,255,255,0.14); }
-  .quick-icon { width: 40px; height: 40px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .quick-icon svg { width: 20px; height: 20px; stroke: white; }
-  .quick-text p { color: white; font-size: 13px; font-weight: 500; }
-  .quick-text span { color: #93C6E0; font-size: 11px; }
+    /* ── EMERGENCY BANNER ── */
+    .emergency-banner {
+      background: #c0392b; color: white; text-align: center; padding: 14px;
+      font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em;
+    }
+    .emergency-banner a { color: white; text-decoration: underline; }
 
-  section { padding: 64px 40px; }
-  .section-label { font-size: 11px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; }
-  .section-title { font-family: var(--font-display); font-size: 32px; color: var(--navy); font-weight: 600; margin-bottom: 8px; }
-  .section-sub { color: var(--gray-text); font-size: 15px; max-width: 560px; }
-  .section-head { margin-bottom: 40px; }
-  .section-head.centered { text-align: center; }
-  .section-head.centered .section-sub { margin: 0 auto; }
+    /* ── SECTIONS ── */
+    section { padding: 72px 5%; }
+    .section-alt { background: var(--section-bg); }
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px; }
+    .section-header h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy); line-height: 1.2; }
+    .section-header p { color: var(--text-muted); margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; font-size: 1rem; }
 
-  .dept-section { background: var(--off-white); }
-  .dept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .dept-card {
-    background: var(--white);
-    border: 1px solid #E2EAF4;
-    border-radius: var(--radius);
-    padding: 24px 18px;
-    text-align: center;
-    transition: border-color 0.2s, transform 0.2s;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .dept-card:hover { border-color: var(--light); transform: translateY(-3px); }
-  .dept-icon {
-    width: 56px; height: 56px;
-    background: var(--gray-light);
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 14px;
-    transition: background 0.2s;
-  }
-  .dept-card:hover .dept-icon { background: #DDEEFF; }
-  .dept-icon svg { width: 26px; height: 26px; stroke: var(--mid); }
-  .dept-name { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
-  .dept-desc { font-size: 11px; color: var(--gray-text); }
+    /* ── QUICK LINKS ── */
+    .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .quick-link-card {
+      background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius);
+      padding: 22px 20px; text-decoration: none; transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+    }
+    .quick-link-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: var(--gold); }
+    .qlc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .qlc-title { font-weight: 700; color: var(--navy); font-size: 0.95rem; margin-bottom: 4px; }
+    .qlc-sub { font-size: 0.8rem; color: var(--text-muted); }
 
-  .about-section { background: var(--white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .about-img-block {
-    background: var(--gray-light);
-    border-radius: 16px;
-    height: 380px;
-    display: flex; align-items: center; justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .about-img-block svg { width: 80px; height: 80px; stroke: var(--light); opacity: 0.4; }
-  .about-img-label { position: absolute; bottom: 0; left: 0; right: 0; background: var(--navy); padding: 14px 20px; display: flex; justify-content: space-between; }
-  .about-img-label span { color: white; font-size: 11px; }
-  .about-img-label strong { color: var(--accent-light); font-size: 16px; font-family: var(--font-display); display: block; }
-  .about-text .section-head { margin-bottom: 24px; }
-  .about-text p { color: var(--gray-text); font-size: 15px; line-height: 1.8; margin-bottom: 20px; }
-  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
-  .pillar { display: flex; align-items: flex-start; gap: 10px; }
-  .pillar-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
-  .pillar p { font-size: 13px; color: var(--navy); font-weight: 500; }
-  .pillar span { font-size: 11px; color: var(--gray-text); }
-  .accred { display: flex; gap: 10px; flex-wrap: wrap; }
-  .accred-badge { background: var(--gray-light); border: 1px solid #D4E0EE; color: var(--navy); font-size: 11px; font-weight: 500; padding: 6px 14px; border-radius: 20px; }
+    /* ── DEPARTMENTS ── */
+    .dept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .dept-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px 16px; cursor: default; transition: box-shadow 0.2s, border-color 0.2s;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .dept-card:hover { box-shadow: var(--shadow); border-color: var(--gold); }
+    .dept-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .dept-name { font-weight: 700; color: var(--navy); font-size: 0.9rem; margin-bottom: 3px; }
+    .dept-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 
-  .doctors-section { background: var(--off-white); }
-  .doc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .doc-card {
-    background: var(--white);
-    border: 1px solid #E2EAF4;
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  .doc-card:hover { transform: translateY(-4px); }
-  .doc-photo {
-    background: linear-gradient(135deg, #E6F0FB 0%, #D4E5F7 100%);
-    height: 160px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .doc-photo svg { width: 60px; height: 60px; stroke: var(--mid); opacity: 0.5; }
-  .doc-body { padding: 16px; }
-  .doc-name { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 3px; }
-  .doc-spec { font-size: 12px; color: var(--light); margin-bottom: 6px; }
-  .doc-exp { font-size: 11px; color: var(--gray-text); display: flex; align-items: center; gap: 4px; }
-  .doc-exp svg { width: 12px; height: 12px; stroke: var(--gray-text); }
-  .doc-book { display: block; text-align: center; margin-top: 12px; padding: 8px; background: var(--gray-light); color: var(--navy); font-size: 12px; border-radius: var(--radius-sm); text-decoration: none; font-weight: 500; transition: background 0.2s; }
-  .doc-book:hover { background: #DDEEFF; color: var(--mid); }
+    /* ── DOCTORS ── */
+    .doctors-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; justify-content: center; }
+    .tab-btn {
+      padding: 7px 18px; border-radius: 100px; border: 1.5px solid var(--border);
+      background: var(--white); font-size: 0.82rem; font-weight: 600; color: var(--text-muted);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+    .doctor-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .doctor-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px; display: flex; align-items: center; gap: 14px;
+    }
+    .doc-avatar {
+      width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 1.1rem; color: var(--gold); font-weight: bold;
+    }
+    .doc-name { font-weight: 700; color: var(--navy); font-size: 0.88rem; margin-bottom: 3px; }
+    .doc-qual { font-size: 0.76rem; color: var(--text-muted); }
+    .doc-dept { font-size: 0.75rem; color: var(--gold-dark); font-weight: 600; margin-top: 4px; }
 
-  .why-section { background: var(--navy); padding: 64px 40px; }
-  .why-section .section-title { color: white; }
-  .why-section .section-sub { color: #93C6E0; }
-  .why-section .section-label { color: var(--accent-light); }
-  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-  .why-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius);
-    padding: 28px 22px;
-  }
-  .why-num { font-family: var(--font-display); font-size: 40px; color: rgba(232,135,26,0.25); font-weight: 600; margin-bottom: 12px; }
-  .why-card h3 { font-size: 15px; color: white; font-weight: 500; margin-bottom: 8px; }
-  .why-card p { font-size: 13px; color: #7EB8D5; line-height: 1.7; }
+    /* ── FEATURES ── */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .feature-card { padding: 28px 24px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+    .feature-num { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); line-height: 1; margin-bottom: 14px; }
+    .feature-title { font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 8px; }
+    .feature-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
-  .testi-section { background: var(--white); }
-  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .testi-card {
-    background: var(--off-white);
-    border: 1px solid #E2EAF4;
-    border-radius: var(--radius);
-    padding: 24px;
-  }
-  .testi-stars { display: flex; gap: 3px; margin-bottom: 14px; }
-  .testi-stars svg { width: 14px; height: 14px; fill: var(--accent); stroke: var(--accent); }
-  .testi-quote { font-size: 14px; color: var(--text); line-height: 1.7; font-family: var(--font-display); font-style: italic; margin-bottom: 18px; }
-  .testi-author { display: flex; align-items: center; gap: 10px; }
-  .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--mid); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 500; }
-  .testi-name { font-size: 13px; font-weight: 500; color: var(--navy); }
-  .testi-dept { font-size: 11px; color: var(--gray-text); }
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .testi-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; }
+    .testi-quote { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; color: var(--navy);
+    }
+    .testi-name { font-weight: 700; font-size: 0.88rem; color: var(--navy); }
+    .testi-role { font-size: 0.76rem; color: var(--text-muted); }
 
-  .appt-section { background: var(--off-white); }
-  .appt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  .appt-form-wrap { background: var(--white); border: 1px solid #E2EAF4; border-radius: 16px; padding: 36px; }
-  .appt-form-wrap h2 { font-family: var(--font-display); font-size: 24px; color: var(--navy); margin-bottom: 6px; }
-  .appt-form-wrap p { font-size: 13px; color: var(--gray-text); margin-bottom: 24px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .form-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
-  .form-field label { font-size: 12px; color: var(--navy); font-weight: 500; }
-  .form-field input,
-  .form-field select,
-  .form-field textarea {
-    border: 1px solid #D4E0EE;
-    border-radius: var(--radius-sm);
-    padding: 10px 14px;
-    font-size: 13px;
-    font-family: var(--font-body);
-    color: var(--text);
-    background: var(--off-white);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .form-field input:focus,
-  .form-field select:focus,
-  .form-field textarea:focus { border-color: var(--light); background: white; }
-  .form-field textarea { resize: none; height: 80px; }
-  .submit-btn {
-    width: 100%;
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 13px;
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: var(--font-body);
-    transition: background 0.2s;
-  }
-  .submit-btn:hover { background: #D47615; }
-  .appt-info { display: flex; flex-direction: column; gap: 24px; }
-  .appt-info h2 { font-family: var(--font-display); font-size: 28px; color: var(--navy); margin-bottom: 8px; }
-  .appt-info > p { color: var(--gray-text); font-size: 15px; line-height: 1.7; margin-bottom: 8px; }
-  .contact-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px; background: var(--white); border: 1px solid #E2EAF4; border-radius: var(--radius); }
-  .contact-icon { width: 40px; height: 40px; background: var(--gray-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-icon svg { width: 18px; height: 18px; stroke: var(--mid); }
-  .contact-item h4 { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
-  .contact-item p { font-size: 13px; color: var(--gray-text); }
+    /* ── APPOINTMENT ── */
+    .appt-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    @media (max-width: 780px) { .appt-wrapper { grid-template-columns: 1fr; } }
+    .appt-info h2 { font-family: var(--font-display); font-size: 2rem; color: var(--navy); margin-bottom: 16px; }
+    .appt-info p { color: var(--text-muted); margin-bottom: 28px; }
+    .appt-contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 18px; }
+    .appt-contact-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(245,168,0,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .appt-contact-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2px; }
+    .appt-contact-val { font-weight: 700; color: var(--navy); font-size: 0.9rem; }
+    .appt-form { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    input, select, textarea {
+      width: 100%; padding: 10px 14px; border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.88rem;
+      background: var(--off-white); color: var(--text); transition: border-color 0.2s;
+      margin-bottom: 16px;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); }
+    .form-submit {
+      width: 100%; background: var(--navy); color: white; padding: 14px;
+      border: none; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; transition: background 0.2s, transform 0.15s; font-family: var(--font-body);
+    }
+    .form-submit:hover { background: var(--navy-light); transform: translateY(-2px); }
 
-  .blog-section { background: var(--white); }
-  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .blog-card { background: var(--off-white); border: 1px solid #E2EAF4; border-radius: var(--radius); overflow: hidden; text-decoration: none; transition: transform 0.2s; }
-  .blog-card:hover { transform: translateY(-3px); }
-  .blog-img { height: 140px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; }
-  .blog-img svg { width: 40px; height: 40px; stroke: var(--light); opacity: 0.4; }
-  .blog-body { padding: 18px; }
-  .blog-tag { font-size: 10px; color: var(--accent); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-  .blog-title { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.5; margin-bottom: 8px; }
-  .blog-meta { font-size: 11px; color: var(--gray-text); }
+    /* ── GOVT SCHEME BANNER ── */
+    .govt-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #0f2040 100%);
+      color: white; border-radius: var(--radius); padding: 36px 40px;
+      display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+    }
+    .govt-banner-icon { font-size: 3.5rem; }
+    .govt-banner h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 8px; }
+    .govt-banner p { color: rgba(255,255,255,0.75); font-size: 0.9rem; max-width: 600px; }
+    .govt-list { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .govt-tag { background: rgba(245,168,0,0.2); border: 1px solid rgba(245,168,0,0.4); color: var(--gold); padding: 4px 14px; border-radius: 100px; font-size: 0.78rem; font-weight: 600; }
 
-  .map-section { background: var(--off-white); padding: 64px 40px; }
-  .map-wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: start; }
-  .map-placeholder { background: #D4E0EE; border-radius: var(--radius); height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; }
-  .map-placeholder svg { width: 48px; height: 48px; stroke: var(--mid); opacity: 0.5; }
-  .map-placeholder p { font-size: 13px; color: var(--gray-text); }
-  .map-info h3 { font-family: var(--font-display); font-size: 22px; color: var(--navy); margin-bottom: 16px; }
-  .map-detail { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
-  .map-detail svg { width: 16px; height: 16px; stroke: var(--accent); margin-top: 3px; flex-shrink: 0; }
-  .map-detail p { font-size: 13px; color: var(--gray-text); line-height: 1.6; }
-  .map-detail strong { color: var(--navy); display: block; font-size: 13px; font-weight: 500; }
+    /* ── DIAGNOSTICS ── */
+    .diag-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .diag-pill {
+      background: var(--white); border: 1.5px solid var(--border); border-radius: 100px;
+      padding: 10px 22px; font-size: 0.88rem; font-weight: 600; color: var(--navy);
+      display: flex; align-items: center; gap: 8px;
+    }
 
-  footer { background: var(--navy); padding: 56px 40px 24px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-  .footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-  .footer-logo-name { font-family: var(--font-display); color: white; font-size: 16px; }
-  .footer-desc { color: #7EB8D5; font-size: 13px; line-height: 1.7; margin-bottom: 20px; }
-  .social-row { display: flex; gap: 10px; }
-  .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; cursor: pointer; }
-  .social-btn:hover { background: rgba(255,255,255,0.15); }
-  .social-btn svg { width: 16px; height: 16px; stroke: #93C6E0; }
-  .footer-col h4 { color: var(--accent-light); font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .footer-links a { color: #7EB8D5; font-size: 13px; text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: white; }
-  .footer-contact-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
-  .footer-contact-item svg { width: 14px; height: 14px; stroke: var(--accent); margin-top: 3px; flex-shrink: 0; }
-  .footer-contact-item p { color: #7EB8D5; font-size: 13px; line-height: 1.5; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
-  .footer-bottom p { color: #4A7090; font-size: 12px; }
-  .footer-bottom-links { display: flex; gap: 20px; }
-  .footer-bottom-links a { color: #4A7090; font-size: 12px; text-decoration: none; }
+    /* ── MAP PLACEHOLDER ── */
+    .map-placeholder {
+      background: var(--section-bg); border: 1px solid var(--border); border-radius: var(--radius);
+      height: 280px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px;
+      color: var(--text-muted); font-size: 0.9rem;
+    }
+    .map-placeholder a { color: var(--gold-dark); font-weight: 600; }
 
-  .float-btns { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
-  .float-btn {
-    width: 50px; height: 50px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-  }
-  .float-btn:hover { transform: scale(1.08); }
-  .float-whatsapp { background: #25D366; }
-  .float-call { background: var(--accent); }
-  .float-btn svg { width: 22px; height: 22px; stroke: white; }
+    /* ── FOOTER ── */
+    footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 56px 5% 28px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    @media (max-width: 780px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+    .footer-brand p { font-size: 0.85rem; margin-top: 12px; line-height: 1.7; }
+    footer h4 { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 9px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    footer a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; }
 
-  @media (max-width: 900px) {
-    .hero { flex-direction: column; padding: 40px 20px; }
-    .hero-card { width: 100%; }
-    .dept-grid, .doc-grid { grid-template-columns: repeat(2, 1fr); }
-    .about-grid, .appt-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .testi-grid, .blog-grid { grid-template-columns: 1fr; }
-    nav { padding: 12px 20px; }
-    section { padding: 48px 20px; }
-    .topbar { padding: 8px 20px; }
-    .quick { padding: 20px; }
-    .quick-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .map-wrap { grid-template-columns: 1fr; }
-  }
-</style>
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      background: #25d366; width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.5); transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── RESPONSIVE NAV ── */
+    @media (max-width: 860px) { .nav-links { display: none; } }
+    @media (max-width: 600px) { .topbar { font-size: 0.75rem; } }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .hero-inner { animation: fadeUp 0.7s ease both; }
+    .hero-stats { animation: fadeUp 0.7s 0.2s ease both; }
+  </style>
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div style="display:flex;gap:20px;flex-wrap:wrap;">
-    <div class="topbar-item emg">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg>
-      Emergency: +91 98400 XXXXX
-    </div>
-    <div class="topbar-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
-      Helpdesk: +91 44 XXXX XXXX
-    </div>
-  </div>
+  <div>📞 Emergency: <a href="tel:04426622111">044 2662 2111</a> &nbsp;|&nbsp; <a href="tel:04426623111">044 2662 3111</a></div>
   <div class="topbar-right">
-    <div class="topbar-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-      WhatsApp us
-    </div>
+    <span>📱 <a href="tel:8925851875">89258 51875</a> / <a href="tel:8925825170">89258 25170</a></span>
+    <span>✉️ <a href="mailto:sribalajihospital999@gmail.com">sribalajihospital999@gmail.com</a></span>
   </div>
 </div>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">
-    <img src="data:image/jpeg;base64,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" alt="SBH Logo" style="height:52px;width:auto;border-radius:8px;">
-    <div class="logo-text">
-      <span class="logo-name">Sri Balaji Hospital</span>
-      <span class="logo-sub">Multi-Speciality · Chennai</span>
-    </div>
+  <a class="nav-brand" href="#home">
+    <div class="nav-logo-circle">SBH</div>
+    <div class="nav-brand-text">Sri Balaji Hospital<span>Multi-Speciality · Chennai</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="#departments">Departments</a></li>
     <li><a href="#doctors">Doctors</a></li>
-    <li><a href="#about">About us</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#appointment" class="btn-appt">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Book appointment
-    </a></li>
+    <li><a class="nav-cta" href="#appointment">Book Appointment</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Trusted since [Year] · NABH Accredited
+<section id="home" class="hero" style="padding-top:80px;padding-bottom:90px;">
+  <div class="hero-inner">
+    <div class="hero-badge">⭐ Shaping Bright Health — 24/7 Emergency Services</div>
+    <h1>Your health,<br /><em>our highest calling</em></h1>
+    <p>Sri Balaji Hospital brings world-class multi-speciality care to Chennai with expert doctors, advanced technology, and compassionate healing — all under one roof at Purasawalkam.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#appointment">Book Appointment</a>
+      <a class="btn-outline" href="tel:04426622111">📞 Call Now</a>
     </div>
-    <h1>Your health,<br>our <span>highest</span> calling</h1>
-    <p>Sri Balaji Hospital brings world-class multi-speciality care to Chennai. Expert doctors, advanced technology, and compassionate healing — all under one roof.</p>
-    <div class="hero-btns">
-      <a href="#appointment" class="btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Book appointment
-      </a>
-      <a href="tel:+9198400XXXXX" class="btn-secondary">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg>
-        Call now
-      </a>
-    </div>
-  </div>
-  <div class="hero-card">
-    <div class="hero-card-title">Our numbers speak</div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">1,00,000<span>+</span></div>
-      <div class="hero-stat-label">Patients successfully treated</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">8<span>+</span></div>
-      <div class="hero-stat-label">Medical specialities</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">50<span>+</span></div>
-      <div class="hero-stat-label">Expert doctors on board</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">99<span>%</span></div>
-      <div class="hero-stat-label">Patient satisfaction rate</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">1,00,000+</div><div class="lbl">Patients Treated</div></div>
+      <div class="hero-stat"><div class="num">25+</div><div class="lbl">Specialities</div></div>
+      <div class="hero-stat"><div class="num">50+</div><div class="lbl">Expert Doctors</div></div>
+      <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Emergency Care</div></div>
     </div>
   </div>
 </section>
 
-<!-- QUICK ACTIONS -->
-<div class="quick">
-  <div class="quick-grid">
-    <a href="#appointment" class="quick-card">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-      <div class="quick-text"><p>Book appointment</p><span>Choose doctor &amp; time →</span></div>
-    </a>
-    <a href="#contact" class="quick-card">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-      <div class="quick-text"><p>Get a second opinion</p><span>Consult our specialists →</span></div>
-    </a>
-    <a href="#contact" class="quick-card">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-      <div class="quick-text"><p>Quick enquiry</p><span>We reply within hours →</span></div>
-    </a>
-  </div>
+<!-- EMERGENCY BANNER -->
+<div class="emergency-banner">
+  🚨 24/7 Accident & Trauma Care — Emergency: <a href="tel:04426622111">044 2662 2111</a> &nbsp;|&nbsp; <a href="tel:8925851875">89258 51875</a>
 </div>
 
-<!-- DEPARTMENTS -->
-<section class="dept-section" id="departments">
-  <div class="section-head centered">
-    <div class="section-label">What we treat</div>
-    <h2 class="section-title">Our departments</h2>
-    <p class="section-sub">Expert care across 8 major specialities with state-of-the-art facilities and experienced consultants.</p>
-  </div>
-  <div class="dept-grid">
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="dept-name">Cardiology</div><div class="dept-desc">Heart care &amp; surgery</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="dept-name">Neurology</div><div class="dept-desc">Brain &amp; nerve disorders</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="dept-name">Orthopaedics</div><div class="dept-desc">Bone, joint &amp; spine</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="dept-name">Gynaecology</div><div class="dept-desc">Women's health</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div><div class="dept-name">Paediatrics</div><div class="dept-desc">Child healthcare</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="dept-name">ENT</div><div class="dept-desc">Ear, nose &amp; throat</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="dept-name">Dental</div><div class="dept-desc">Oral &amp; dental care</div></a>
-    <a href="#" class="dept-card"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="dept-name">General Medicine</div><div class="dept-desc">Primary &amp; preventive</div></a>
+<!-- QUICK LINKS -->
+<section style="padding:40px 5%;">
+  <div class="quick-links">
+    <a class="quick-link-card" href="#appointment">
+      <div class="qlc-icon">📅</div>
+      <div class="qlc-title">Book Appointment</div>
+      <div class="qlc-sub">Choose doctor & time →</div>
+    </a>
+    <a class="quick-link-card" href="tel:04426622111">
+      <div class="qlc-icon">🚑</div>
+      <div class="qlc-title">Emergency Services</div>
+      <div class="qlc-sub">24/7 trauma care →</div>
+    </a>
+    <a class="quick-link-card" href="#departments">
+      <div class="qlc-icon">🏥</div>
+      <div class="qlc-title">Our Departments</div>
+      <div class="qlc-sub">25+ specialities →</div>
+    </a>
+    <a class="quick-link-card" href="#doctors">
+      <div class="qlc-icon">👨‍⚕️</div>
+      <div class="qlc-title">Meet Our Doctors</div>
+      <div class="qlc-sub">Expert specialists →</div>
+    </a>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-grid">
-    <div class="about-img-block">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
-      <div class="about-img-label">
-        <div><span>Established</span><strong>[Year]</strong></div>
-        <div><span>Location</span><strong>Chennai</strong></div>
-        <div><span>Accreditation</span><strong>NABH</strong></div>
-      </div>
+<!-- DEPARTMENTS -->
+<section id="departments" class="section-alt">
+  <div class="section-header">
+    <div class="section-label">What We Treat</div>
+    <h2>Our Departments</h2>
+    <p>Expert care across 25+ major specialities with state-of-the-art facilities and experienced consultants.</p>
+  </div>
+  <div class="dept-grid">
+    <div class="dept-card"><div class="dept-icon">❤️</div><div><div class="dept-name">Cardiology</div><div class="dept-desc">Non-invasive cardiology & heart care</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🧠</div><div><div class="dept-name">Neurology & Neuro Surgery</div><div class="dept-desc">Brain, nerve disorders & neurosurgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🦴</div><div><div class="dept-name">Orthopaedics & Arthroscopy</div><div class="dept-desc">Bone, joint & replacement surgeries</div></div></div>
+    <div class="dept-card"><div class="dept-icon">👶</div><div><div class="dept-name">Obstetrics & Gynaecology</div><div class="dept-desc">Women's health & infertility treatment</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🧒</div><div><div class="dept-name">Paediatrics & Child Speciality</div><div class="dept-desc">Child healthcare & paediatric surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🫁</div><div><div class="dept-name">Pulmonology & Thoracic</div><div class="dept-desc">Respiratory & lung medicine</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🎗️</div><div><div class="dept-name">Oncology (Medical & Surgical)</div><div class="dept-desc">Cancer specialty medicine & surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🔬</div><div><div class="dept-name">Radio Oncology</div><div class="dept-desc">Radiation therapy for cancer</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🫀</div><div><div class="dept-name">Vascular & Plastic Surgery</div><div class="dept-desc">Blood vessel & reconstructive surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🩺</div><div><div class="dept-name">Nephrology & Urology</div><div class="dept-desc">Kidney care, dialysis & urological surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">👂</div><div><div class="dept-name">ENT Surgery</div><div class="dept-desc">Ear, nose and throat surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🍽️</div><div><div class="dept-name">Gastroenterology</div><div class="dept-desc">Intestinal, gastric & liver surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">💉</div><div><div class="dept-name">Endocrinology & Diabetic Unit</div><div class="dept-desc">Diabetes, thyroid & hormone care</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🔭</div><div><div class="dept-name">Minimal Access Surgery</div><div class="dept-desc">Laparoscopic & endoscopic surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">💆</div><div><div class="dept-name">Cosmetic & Plastic Surgery</div><div class="dept-desc">Facial reconstruction & aesthetics</div></div></div>
+    <div class="dept-card"><div class="dept-icon">👁️</div><div><div class="dept-name">Ophthalmology</div><div class="dept-desc">Eye care & vision surgery</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🧬</div><div><div class="dept-name">Dermatology</div><div class="dept-desc">Skin care & treatments</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🧘</div><div><div class="dept-name">Psychiatry & Counselling</div><div class="dept-desc">Mental health & family counselling</div></div></div>
+    <div class="dept-card"><div class="dept-icon">💊</div><div><div class="dept-name">Pain & Palliative Care</div><div class="dept-desc">Chronic pain management</div></div></div>
+    <div class="dept-card"><div class="dept-icon">⚡</div><div><div class="dept-name">Emergency & Critical Care</div><div class="dept-desc">24/7 trauma & ICU services</div></div></div>
+    <div class="dept-card"><div class="dept-icon">⚖️</div><div><div class="dept-name">Bariatric & Metabolic Surgery</div><div class="dept-desc">Weight loss & metabolic disorders</div></div></div>
+    <div class="dept-card"><div class="dept-icon">🏋️</div><div><div class="dept-name">Endocrine Surgery</div><div class="dept-desc">Thyroid, parathyroid & adrenal surgery</div></div></div>
+  </div>
+
+  <!-- Diagnostics -->
+  <div style="margin-top:48px; text-align:center;">
+    <div class="section-label" style="margin-bottom:20px;">Diagnostics Available</div>
+    <div class="diag-grid">
+      <div class="diag-pill">🖥️ CT Scan</div>
+      <div class="diag-pill">🔭 Endoscopy</div>
+      <div class="diag-pill">❤️ Echo</div>
+      <div class="diag-pill">📡 Ultra Sound</div>
+      <div class="diag-pill">🫁 Pulmonary Function Test</div>
+      <div class="diag-pill">🔬 Laboratory Services</div>
+      <div class="diag-pill">💊 Pharmacy Services</div>
     </div>
-    <div class="about-text">
-      <div class="section-head">
-        <div class="section-label">About Sri Balaji Hospital</div>
-        <h2 class="section-title">Care you can trust, technology you can rely on</h2>
-      </div>
-      <p>Sri Balaji Hospital has been a cornerstone of healthcare in Chennai, delivering compassionate and expert medical care across 8 specialities. Our team of seasoned doctors, nurses, and support staff are committed to your well-being at every step.</p>
-      <p>From routine check-ups to complex surgeries, we bring cutting-edge medical technology and a warm, patient-first approach together — because every patient deserves the very best.</p>
-      <div class="pillars">
-        <div class="pillar"><div class="pillar-dot"></div><div><p>24/7 Emergency care</p><span>Always here when it matters</span></div></div>
-        <div class="pillar"><div class="pillar-dot"></div><div><p>Advanced diagnostics</p><span>CT, MRI, Lab &amp; more</span></div></div>
-        <div class="pillar"><div class="pillar-dot"></div><div><p>Expert surgeons</p><span>Decades of experience</span></div></div>
-        <div class="pillar"><div class="pillar-dot"></div><div><p>Modern ICU &amp; NICU</p><span>Critical care facility</span></div></div>
-      </div>
-      <div class="accred">
-        <span class="accred-badge">NABH Accredited</span>
-        <span class="accred-badge">24/7 Emergency</span>
-        <span class="accred-badge">Modern OT</span>
-        <span class="accred-badge">Blood bank</span>
-        <span class="accred-badge">Pharmacy</span>
-      </div>
+  </div>
+
+  <!-- World-Class Laser -->
+  <div style="margin-top:32px; text-align:center;">
+    <div class="section-label" style="margin-bottom:20px;">World-Class Laser Facilities</div>
+    <div class="diag-grid">
+      <div class="diag-pill">🔵 Piles & Fistula</div>
+      <div class="diag-pill">🔵 Varicose Veins</div>
+      <div class="diag-pill">🔵 Cosmetic Gynaecology</div>
+      <div class="diag-pill">🔵 ENT Laser Surgery</div>
     </div>
   </div>
 </section>
 
 <!-- DOCTORS -->
-<section class="doctors-section" id="doctors">
-  <div class="section-head centered">
-    <div class="section-label">Expert team</div>
-    <h2 class="section-title">Meet our doctors</h2>
-    <p class="section-sub">Highly qualified specialists committed to delivering exceptional patient care with empathy.</p>
+<section id="doctors">
+  <div class="section-header">
+    <div class="section-label">Expert Team</div>
+    <h2>Meet Our Doctors</h2>
+    <p>Highly qualified specialists committed to delivering exceptional patient care with empathy.</p>
   </div>
-  <div class="doc-grid">
-    <div class="doc-card"><div class="doc-photo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div><div class="doc-body"><div class="doc-name">Dr. [Name]</div><div class="doc-spec">Senior Cardiologist</div><div class="doc-exp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 20+ years experience</div><a href="#appointment" class="doc-book">Book appointment</a></div></div>
-    <div class="doc-card"><div class="doc-photo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div><div class="doc-body"><div class="doc-name">Dr. [Name]</div><div class="doc-spec">Neurologist</div><div class="doc-exp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 18+ years experience</div><a href="#appointment" class="doc-book">Book appointment</a></div></div>
-    <div class="doc-card"><div class="doc-photo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div><div class="doc-body"><div class="doc-name">Dr. [Name]</div><div class="doc-spec">Orthopaedic Surgeon</div><div class="doc-exp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15+ years experience</div><a href="#appointment" class="doc-book">Book appointment</a></div></div>
-    <div class="doc-card"><div class="doc-photo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div><div class="doc-body"><div class="doc-name">Dr. [Name]</div><div class="doc-spec">Gynaecologist &amp; Obstetrician</div><div class="doc-exp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 17+ years experience</div><a href="#appointment" class="doc-book">Book appointment</a></div></div>
+  <div class="doctors-tabs">
+    <button class="tab-btn active" onclick="showDept('all', this)">All</button>
+    <button class="tab-btn" onclick="showDept('medicine', this)">General Medicine</button>
+    <button class="tab-btn" onclick="showDept('surgery', this)">Surgery</button>
+    <button class="tab-btn" onclick="showDept('ortho', this)">Orthopaedics</button>
+    <button class="tab-btn" onclick="showDept('obs', this)">Obs & Gynae</button>
+    <button class="tab-btn" onclick="showDept('paed', this)">Paediatrics</button>
+    <button class="tab-btn" onclick="showDept('cardio', this)">Cardiology</button>
+    <button class="tab-btn" onclick="showDept('neuro', this)">Neurology</button>
+    <button class="tab-btn" onclick="showDept('onco', this)">Oncology</button>
   </div>
-  <div style="text-align:center;margin-top:32px;"><a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--mid);font-size:14px;text-decoration:none;font-weight:500;border:1px solid var(--mid);padding:10px 24px;border-radius:var(--radius-sm);">View all doctors →</a></div>
+  <div class="doctor-list" id="doctorList">
+    <!-- Populated by JS -->
+  </div>
 </section>
 
-<!-- WHY US -->
-<section class="why-section">
-  <div class="section-head centered">
-    <div class="section-label">Why Sri Balaji</div>
-    <h2 class="section-title">What sets us apart</h2>
-    <p class="section-sub" style="color:#93C6E0;">We combine clinical excellence with genuine compassion — because healing is both a science and an art.</p>
+<!-- GOVT SCHEME -->
+<section class="section-alt">
+  <div class="govt-banner">
+    <div class="govt-banner-icon">🏛️</div>
+    <div>
+      <h3>Free Treatment — Government Scheme</h3>
+      <p>Sri Balaji Hospital is an authorised hospital to provide free treatment to Tamil Nadu Government employees, pensioners, co-operative workers, and AAVIN employees along with their family members.</p>
+      <div class="govt-list">
+        <span class="govt-tag">TN Govt. Employees</span>
+        <span class="govt-tag">Govt. Pensioners</span>
+        <span class="govt-tag">Co-operative Workers</span>
+        <span class="govt-tag">AAVIN Employees</span>
+        <span class="govt-tag">Family Members</span>
+      </div>
+    </div>
   </div>
-  <div class="why-grid">
-    <div class="why-card"><div class="why-num">01</div><h3>Patient-first approach</h3><p>Every decision we make centres around you — your comfort, your recovery, your peace of mind. We listen before we advise.</p></div>
-    <div class="why-card"><div class="why-num">02</div><h3>Advanced technology</h3><p>From digital X-rays and modern OTs to a fully equipped ICU, we invest in the latest medical technology so you get the best care.</p></div>
-    <div class="why-card"><div class="why-num">03</div><h3>24/7 emergency care</h3><p>Medical emergencies don't wait — and neither do we. Our emergency team is on standby round the clock, every day of the year.</p></div>
-    <div class="why-card"><div class="why-num">04</div><h3>Experienced specialists</h3><p>Our team of consultants bring decades of combined experience across all major specialities, ensuring expert hands at every stage.</p></div>
-    <div class="why-card"><div class="why-num">05</div><h3>Affordable quality care</h3><p>World-class healthcare shouldn't be a luxury. We offer transparent pricing, insurance support, and flexible payment options.</p></div>
-    <div class="why-card"><div class="why-num">06</div><h3>Trusted by Chennai</h3><p>Over 1,00,000 patients have placed their trust in Sri Balaji Hospital. That trust drives us to be better every single day.</p></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+    <div>
+      <div class="section-label">About Sri Balaji Hospital</div>
+      <h2 style="font-family:var(--font-display); font-size:2.2rem; color:var(--navy); line-height:1.2; margin-bottom:18px;">Care you can trust,<br/>technology you can rely on</h2>
+      <p style="color:var(--text-muted); margin-bottom:18px;">Sri Balaji Hospital is a cornerstone of healthcare in Chennai, delivering compassionate and expert medical care across 25+ specialities. Our team of seasoned doctors, nurses, and support staff are committed to your well-being at every step.</p>
+      <p style="color:var(--text-muted); margin-bottom:28px;">From routine check-ups to complex surgeries, we bring cutting-edge medical technology and a warm, patient-first approach together — because every patient deserves the very best.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+        <div style="background:var(--section-bg); border-radius:var(--radius-sm); padding:16px;">
+          <div style="font-size:1.1rem; margin-bottom:6px;">🚨</div>
+          <div style="font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:3px;">24/7 Emergency</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Always here when it matters</div>
+        </div>
+        <div style="background:var(--section-bg); border-radius:var(--radius-sm); padding:16px;">
+          <div style="font-size:1.1rem; margin-bottom:6px;">🔬</div>
+          <div style="font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:3px;">Advanced Diagnostics</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">CT, Echo, Lab & more</div>
+        </div>
+        <div style="background:var(--section-bg); border-radius:var(--radius-sm); padding:16px;">
+          <div style="font-size:1.1rem; margin-bottom:6px;">🏥</div>
+          <div style="font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:3px;">Modern ICU & NICU</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Critical care facility</div>
+        </div>
+        <div style="background:var(--section-bg); border-radius:var(--radius-sm); padding:16px;">
+          <div style="font-size:1.1rem; margin-bottom:6px;">💊</div>
+          <div style="font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:3px;">Pharmacy & Lab</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">On-site 24/7</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--navy); border-radius:var(--radius); padding:36px; color:white;">
+        <div style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:24px; color:var(--gold);">Why Choose Sri Balaji?</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;"><span style="color:var(--gold); font-size:1.2rem; flex-shrink:0;">✓</span><div><div style="font-weight:700; font-size:0.9rem; margin-bottom:3px;">Patient-first approach</div><div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.5;">Every decision centres around your comfort and recovery.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:flex-start;"><span style="color:var(--gold); font-size:1.2rem; flex-shrink:0;">✓</span><div><div style="font-weight:700; font-size:0.9rem; margin-bottom:3px;">Govt. approved free treatment</div><div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.5;">Authorised for TN Government employees & pensioners.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:flex-start;"><span style="color:var(--gold); font-size:1.2rem; flex-shrink:0;">✓</span><div><div style="font-weight:700; font-size:0.9rem; margin-bottom:3px;">World-class laser facilities</div><div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.5;">Piles, varicose veins, cosmetic & ENT laser surgery.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:flex-start;"><span style="color:var(--gold); font-size:1.2rem; flex-shrink:0;">✓</span><div><div style="font-weight:700; font-size:0.9rem; margin-bottom:3px;">50+ Expert specialists</div><div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.5;">Decades of combined experience across all major departments.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:flex-start;"><span style="color:var(--gold); font-size:1.2rem; flex-shrink:0;">✓</span><div><div style="font-weight:700; font-size:0.9rem; margin-bottom:3px;">Affordable & transparent pricing</div><div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.5;">Insurance support & flexible payment options available.</div></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testi-section">
-  <div class="section-head centered">
-    <div class="section-label">Patient stories</div>
-    <h2 class="section-title">What our patients say</h2>
-    <p class="section-sub">Real stories from real people whose lives we've had the privilege of touching.</p>
+<section class="section-alt">
+  <div class="section-header">
+    <div class="section-label">Patient Stories</div>
+    <h2>What Our Patients Say</h2>
   </div>
-  <div class="testi-grid">
+  <div class="testimonials-grid">
     <div class="testi-card">
-      <div class="testi-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
       <p class="testi-quote">"The doctors at Sri Balaji are truly exceptional. My father's cardiac treatment was handled with such care and professionalism. We felt supported throughout."</p>
-      <div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Rajesh Kumar</div><div class="testi-dept">Cardiac patient · Anna Nagar</div></div></div>
+      <div class="testi-author">
+        <div class="testi-avatar">RK</div>
+        <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">Cardiac patient · Anna Nagar</div></div>
+      </div>
     </div>
     <div class="testi-card">
-      <div class="testi-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
       <p class="testi-quote">"I delivered my baby here and the entire gynaecology team made me feel so safe. Clean, modern facilities and nurses who genuinely care. Highly recommend!"</p>
-      <div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Priya Subramaniam</div><div class="testi-dept">Maternity patient · Velachery</div></div></div>
+      <div class="testi-author">
+        <div class="testi-avatar">PS</div>
+        <div><div class="testi-name">Priya Subramaniam</div><div class="testi-role">Maternity patient · Velachery</div></div>
+      </div>
     </div>
     <div class="testi-card">
-      <div class="testi-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
       <p class="testi-quote">"My knee replacement surgery at Sri Balaji was a complete success. The orthopaedic team was brilliant. I'm walking freely again after years of pain. Thank you!"</p>
-      <div class="testi-author"><div class="testi-avatar">MV</div><div><div class="testi-name">Murugan Velu</div><div class="testi-dept">Orthopaedic patient · Tambaram</div></div></div>
+      <div class="testi-author">
+        <div class="testi-avatar">MV</div>
+        <div><div class="testi-name">Murugan Velu</div><div class="testi-role">Orthopaedic patient · Tambaram</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- APPOINTMENT -->
-<section class="appt-section" id="appointment">
-  <div class="appt-grid">
-    <div class="appt-form-wrap">
-      <h2>Book an appointment</h2>
-      <p>Fill in your details and our team will confirm your slot within 2 hours.</p>
-      <div class="form-row">
-        <div class="form-field"><label>Full name</label><input type="text" placeholder="Your full name"></div>
-        <div class="form-field"><label>Mobile number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
-      </div>
-      <div class="form-row">
-        <div class="form-field"><label>Department</label><select><option value="">Select department</option><option>Cardiology</option><option>Neurology</option><option>Orthopaedics</option><option>Gynaecology</option><option>Paediatrics</option><option>ENT</option><option>Dental</option><option>General Medicine</option></select></div>
-        <div class="form-field"><label>Preferred date</label><input type="date"></div>
-      </div>
-      <div class="form-field"><label>Message (optional)</label><textarea placeholder="Briefly describe your concern..."></textarea></div>
-      <button class="submit-btn">Book appointment now</button>
-    </div>
+<section id="appointment">
+  <div class="appt-wrapper">
     <div class="appt-info">
-      <div>
-        <h2>We are here for you</h2>
-        <p>Whether it's a routine check-up or an urgent concern, our team is ready to help. Reach us anytime.</p>
+      <div class="section-label">Book Appointment</div>
+      <h2>We are here for you</h2>
+      <p>Whether it's a routine check-up or an urgent concern, our team is ready to help. Reach us anytime.</p>
+
+      <div class="appt-contact-item">
+        <div class="appt-contact-icon">🚨</div>
+        <div><div class="appt-contact-label">Emergency Line (24/7)</div><div class="appt-contact-val"><a href="tel:04426622111" style="color:var(--navy); text-decoration:none;">044 2662 2111</a> / <a href="tel:04426623111" style="color:var(--navy); text-decoration:none;">044 2662 3111</a></div></div>
       </div>
-      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg></div><div><h4>Emergency line</h4><p>+91 98400 XXXXX — available 24 × 7</p></div></div>
-      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><h4>OPD hours</h4><p>Monday – Saturday: 8:00 AM – 8:00 PM</p></div></div>
-      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Address</h4><p>[Your full address], Chennai, Tamil Nadu</p></div></div>
-      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p>info@sribalajihosp.com</p></div></div>
+      <div class="appt-contact-item">
+        <div class="appt-contact-icon">📱</div>
+        <div><div class="appt-contact-label">Mobile / WhatsApp</div><div class="appt-contact-val"><a href="tel:8925851875" style="color:var(--navy); text-decoration:none;">89258 51875</a> / <a href="tel:8925825170" style="color:var(--navy); text-decoration:none;">89258 25170</a></div></div>
+      </div>
+      <div class="appt-contact-item">
+        <div class="appt-contact-icon">📍</div>
+        <div><div class="appt-contact-label">Address</div><div class="appt-contact-val">No. 77, Brickkiln Road, Purasawalkam, Otteri, Chennai – 12</div></div>
+      </div>
+      <div class="appt-contact-item">
+        <div class="appt-contact-icon">⏰</div>
+        <div><div class="appt-contact-label">OPD Hours</div><div class="appt-contact-val">Monday – Saturday: 8:00 AM – 8:00 PM<br/>Emergency: 24 × 7</div></div>
+      </div>
+      <div class="appt-contact-item">
+        <div class="appt-contact-icon">✉️</div>
+        <div><div class="appt-contact-label">Email</div><div class="appt-contact-val"><a href="mailto:sribalajihospital999@gmail.com" style="color:var(--gold-dark);">sribalajihospital999@gmail.com</a></div></div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder" style="margin-top:24px;">
+        <div style="font-size:2rem;">🗺️</div>
+        <div>No. 77, Brickkiln Road, Purasawalkam, Otteri, Chennai – 12</div>
+        <a href="https://maps.google.com/?q=No.77+Brickkiln+Road+Purasawalkam+Chennai" target="_blank">Open in Google Maps →</a>
+      </div>
+    </div>
+
+    <div class="appt-form">
+      <h3 style="font-family:var(--font-display); font-size:1.4rem; color:var(--navy); margin-bottom:6px;">Book an Appointment</h3>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:22px;">Fill in your details and our team will confirm your slot within 2 hours.</p>
+      <div class="form-row">
+        <div><label for="fname">Full Name</label><input type="text" id="fname" placeholder="Your full name" /></div>
+        <div><label for="phone">Mobile Number</label><input type="tel" id="phone" placeholder="9XXXXXXXXX" /></div>
+      </div>
+      <label for="dept">Department</label>
+      <select id="dept">
+        <option value="">Select department</option>
+        <option>Cardiology</option>
+        <option>Neurology & Neuro Surgery</option>
+        <option>Orthopaedics & Arthroscopy</option>
+        <option>Obstetrics & Gynaecology</option>
+        <option>Paediatrics & Child Speciality</option>
+        <option>Pulmonology & Thoracic Medicine</option>
+        <option>Oncology (Medical & Surgical)</option>
+        <option>Nephrology & Urology</option>
+        <option>ENT Surgery</option>
+        <option>Gastroenterology</option>
+        <option>Endocrinology & Diabetic Unit</option>
+        <option>Minimal Access Surgery (Laparoscopic)</option>
+        <option>Cosmetic & Plastic Surgery</option>
+        <option>Vascular Surgery</option>
+        <option>Ophthalmology</option>
+        <option>Dermatology</option>
+        <option>Psychiatry & Family Counselling</option>
+        <option>Pain & Palliative Care</option>
+        <option>Bariatric & Metabolic Surgery</option>
+        <option>General Surgery</option>
+        <option>Internal & General Medicine</option>
+        <option>Emergency & Critical Care</option>
+      </select>
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" />
+      <label for="msg">Message (optional)</label>
+      <textarea id="msg" rows="3" placeholder="Describe your concern briefly..."></textarea>
+      <button class="form-submit" onclick="submitAppointment()">Book Appointment Now →</button>
     </div>
   </div>
 </section>
 
-<!-- BLOG -->
-<section class="blog-section" id="blog">
-  <div class="section-head">
-    <div class="section-label">Health insights</div>
-    <h2 class="section-title">Articles &amp; health tips</h2>
-    <p class="section-sub">Expert advice from our doctors to help you stay informed and healthy.</p>
-  </div>
-  <div class="blog-grid">
-    <a href="#" class="blog-card"><div class="blog-img"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="blog-body"><div class="blog-tag">Cardiology</div><div class="blog-title">5 warning signs of heart disease you should never ignore</div><div class="blog-meta">By Dr. [Name] · 5 min read</div></div></a>
-    <a href="#" class="blog-card"><div class="blog-img"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="blog-body"><div class="blog-tag">Neurology</div><div class="blog-title">Recognising stroke symptoms early — every minute counts</div><div class="blog-meta">By Dr. [Name] · 4 min read</div></div></a>
-    <a href="#" class="blog-card"><div class="blog-img"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="blog-body"><div class="blog-tag">Wellness</div><div class="blog-title">Managing diabetes with a South Indian diet — practical tips</div><div class="blog-meta">By Dr. [Name] · 6 min read</div></div></a>
-  </div>
-  <div style="text-align:center;margin-top:32px;"><a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--mid);font-size:14px;text-decoration:none;font-weight:500;">Read all articles →</a></div>
-</section>
-
-<!-- MAP & CONTACT -->
-<section class="map-section" id="contact">
-  <div class="section-head">
-    <div class="section-label">Find us</div>
-    <h2 class="section-title">Visit Sri Balaji Hospital</h2>
-  </div>
-  <div class="map-wrap">
-    <div class="map-info">
-      <h3>Getting here</h3>
-      <div class="map-detail"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Address</strong><p>[Door No], [Street], [Area], Chennai – [Pincode], Tamil Nadu</p></div></div>
-      <div class="map-detail"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg><div><strong>Phone</strong><p>+91 98400 XXXXX (Emergency)<br>+91 44 XXXX XXXX (OPD)</p></div></div>
-      <div class="map-detail"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><strong>OPD hours</strong><p>Monday – Saturday: 8:00 AM – 8:00 PM<br>Emergency: 24 × 7</p></div></div>
-    </div>
-    <div class="map-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <p>Google Maps will appear here</p>
-      <p style="font-size:11px;color:#8A9DB5;">Paste your Google Maps embed code here</p>
-    </div>
+<!-- CONTACT MAP SECTION -->
+<section id="contact" class="section-alt" style="padding-top:48px; padding-bottom:48px;">
+  <div style="text-align:center;">
+    <div class="section-label">Find Us</div>
+    <h2 style="font-family:var(--font-display); font-size:2rem; color:var(--navy); margin-bottom:8px;">Visit Sri Balaji Hospital</h2>
+    <p style="color:var(--text-muted); margin-bottom:0;">No. 77, Brickkiln Road, Purasawalkam, Otteri, Chennai – 600 012</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+        <div class="nav-logo-circle" style="width:38px;height:38px;font-size:15px;">SBH</div>
+        <div style="font-family:var(--font-display); font-size:1.1rem; color:white;">Sri Balaji Hospital</div>
+      </div>
+      <p>Providing compassionate, expert multi-speciality healthcare at No. 77, Brickkiln Road, Purasawalkam, Otteri, Chennai – 600 012.</p>
+      <p style="margin-top:10px;">📧 <a href="mailto:sribalajihospital999@gmail.com">sribalajihospital999@gmail.com</a></p>
+    </div>
     <div>
-      <div class="footer-logo-wrap">
-        <img src="data:image/jpeg;base64,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" alt="SBH Logo" style="height:44px;width:auto;border-radius:6px;">
-        <span class="footer-logo-name">Sri Balaji Hospital</span>
-      </div>
-      <p class="footer-desc">Providing compassionate, expert multi-speciality healthcare to Chennai and Tamil Nadu. Your health is our purpose.</p>
-      <div class="social-row">
-        <div class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
-        <div class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-        <div class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></div>
-        <div class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Quick links</h4>
-      <ul class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About us</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#departments">Departments</a></li>
-        <li><a href="#doctors">Our doctors</a></li>
-        <li><a href="#appointment">Book appointment</a></li>
-        <li><a href="#blog">Health articles</a></li>
-        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#doctors">Our Doctors</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
-    <div class="footer-col">
+    <div>
       <h4>Departments</h4>
-      <ul class="footer-links">
-        <li><a href="#">Cardiology</a></li>
-        <li><a href="#">Neurology</a></li>
-        <li><a href="#">Orthopaedics</a></li>
-        <li><a href="#">Gynaecology</a></li>
-        <li><a href="#">Paediatrics</a></li>
-        <li><a href="#">ENT</a></li>
-        <li><a href="#">Dental</a></li>
-        <li><a href="#">General Medicine</a></li>
+      <ul>
+        <li><a href="#departments">Cardiology</a></li>
+        <li><a href="#departments">Neurology</a></li>
+        <li><a href="#departments">Orthopaedics</a></li>
+        <li><a href="#departments">Gynaecology</a></li>
+        <li><a href="#departments">Paediatrics</a></li>
+        <li><a href="#departments">Oncology</a></li>
+        <li><a href="#departments">ENT</a></li>
+        <li><a href="#departments">General Medicine</a></li>
       </ul>
     </div>
-    <div class="footer-col">
+    <div>
       <h4>Contact</h4>
-      <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg><p>+91 98400 XXXXX<br>+91 44 XXXX XXXX</p></div>
-      <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p>info@sribalajihosp.com</p></div>
-      <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>[Your Address],<br>Chennai, Tamil Nadu</p></div>
+      <ul>
+        <li><a href="tel:04426622111">044 2662 2111</a></li>
+        <li><a href="tel:04426623111">044 2662 3111</a></li>
+        <li><a href="tel:8925851875">89258 51875</a></li>
+        <li><a href="tel:8925825170">89258 25170</a></li>
+        <li style="margin-top:10px; color:rgba(255,255,255,0.5); font-size:0.82rem;">OPD: Mon–Sat 8AM–8PM</li>
+        <li style="color:rgba(255,255,255,0.5); font-size:0.82rem;">Emergency: 24 × 7</li>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Sri Balaji Hospital, Chennai. All rights reserved.</p>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy policy</a>
-      <a href="#">Terms &amp; conditions</a>
-      <a href="#">Sitemap</a>
-    </div>
+    <p>© 2025 Sri Balaji Hospital, Chennai. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<div class="float-btns">
-  <a href="https://wa.me/91XXXXXXXXXX" class="float-btn float-whatsapp" title="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-  </a>
-  <a href="tel:+9198400XXXXX" class="float-btn float-call" title="Call now">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.18 2 2 0 015 5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 12.91A16 16 0 0016 19.82l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 21v-4.08z"/></svg>
-  </a>
-</div>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/918925851875" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
+<script>
+const doctors = [
+  // Internal & General Medicine
+  { name: "Dr. Savamalatha", qual: "MD (Gen Med)", dept: "medicine", deptLabel: "Internal & General Medicine" },
+  { name: "Dr. Rajasekar", qual: "MBBS (Gen Med)", dept: "medicine", deptLabel: "Internal & General Medicine" },
+  { name: "Dr. Swarnamahalingam", qual: "MBBS, DNB (Gen Med)", dept: "medicine", deptLabel: "Internal & General Medicine" },
+  { name: "Dr. Bharathlochan", qual: "MBBS, MD (Gen Med)", dept: "medicine", deptLabel: "Internal & General Medicine" },
+  // Surgery
+  { name: "Dr. Vignesh", qual: "MS (Gen Surg)", dept: "surgery", deptLabel: "Laparoscopic & General Surgery" },
+  { name: "Dr. Lakshmana Moorthy", qual: "MS (Gen Surg)", dept: "surgery", deptLabel: "Laparoscopic & General Surgery" },
+  { name: "Dr. Karthick", qual: "MBBS (Gen Surg)", dept: "surgery", deptLabel: "Laparoscopic & General Surgery" },
+  // Orthopaedics
+  { name: "Dr. Srinivasan Cholan", qual: "MS (Ortho)", dept: "ortho", deptLabel: "Orthopaedics & Arthroscopic Surgery" },
+  { name: "Dr. Jonathan Samuel Christopher", qual: "MS (Ortho)", dept: "ortho", deptLabel: "Orthopaedics & Arthroscopic Surgery" },
+  { name: "Dr. Sivaprasad", qual: "MS (Ortho Surgeon)", dept: "ortho", deptLabel: "Orthopaedics & Arthroscopic Surgery" },
+  // Obs & Gynae
+  { name: "Dr. Meera Srinivasan", qual: "MS (OBG & GYN)", dept: "obs", deptLabel: "Obstetrics & Gynaecology" },
+  { name: "Dr. Preethi G Singamani", qual: "MS (OBG & GYN)", dept: "obs", deptLabel: "Obstetrics & Gynaecology" },
+  // Paediatrics
+  { name: "Dr. Renu Maheswari", qual: "DNB (Paed)", dept: "paed", deptLabel: "Paediatric & Critical Care" },
+  { name: "Dr. Shaalini", qual: "MD (Paed), MRCPCH, DNB (Paed)", dept: "paed", deptLabel: "Paediatric & Critical Care" },
+  { name: "Dr. NIVAS", qual: "DA, MD Pediatrician", dept: "paed", deptLabel: "Paediatric Surgery" },
+  // Pulmonology
+  { name: "Dr. Gowtham Ram Karthick", qual: "MD (Pulmo)", dept: "medicine", deptLabel: "Pulmonology" },
+  { name: "Dr. Pramod", qual: "MD (Pulmo)", dept: "medicine", deptLabel: "Pulmonology" },
+  { name: "Dr. Shanmugasundaram", qual: "MD Pulmonologist", dept: "medicine", deptLabel: "Pulmonology" },
+  // Cardiology
+  { name: "Dr. K. Sidharthan", qual: "MD, DM (Cardio)", dept: "cardio", deptLabel: "Cardiology" },
+  { name: "Dr. Saye", qual: "MD, DM (Cardio)", dept: "cardio", deptLabel: "Cardiology" },
+  // Gastro
+  { name: "Dr. Nageshwar Rao", qual: "MD, DM (Medi Gastro)", dept: "surgery", deptLabel: "Medical Gastroenterology" },
+  { name: "Dr. Vaishnavi Priya", qual: "DM Gastro", dept: "surgery", deptLabel: "Medical Gastroenterology" },
+  { name: "Dr. Thiru Muruganandan", qual: "MS, MCh (Sur Gastro)", dept: "surgery", deptLabel: "Surgical Gastroenterology" },
+  { name: "Dr. Azhagusundaram", qual: "MS, FNAS", dept: "surgery", deptLabel: "Surgical Gastroenterology" },
+  { name: "Dr. Livin Jose", qual: "MCh Sur Gastro & Endocrinologist", dept: "surgery", deptLabel: "Surgical Gastroenterology" },
+  // Neurology
+  { name: "Dr. S. Kaushik", qual: "MD, DM (Neuro)", dept: "neuro", deptLabel: "Neurology" },
+  { name: "Dr. Shylaja", qual: "DM Neurologist", dept: "neuro", deptLabel: "Neurology" },
+  { name: "Dr. Priya Dharshan", qual: "MS, MCh (Neuro Surg)", dept: "neuro", deptLabel: "Neuro Surgery" },
+  { name: "Dr. Udayadasan", qual: "MCh (Neuro Surgeon)", dept: "neuro", deptLabel: "Neuro Surgery" },
+  // Nephrology
+  { name: "Dr. Murali", qual: "MBBS, DNB, FRCR Sonologist", dept: "medicine", deptLabel: "Nephrology" },
+  { name: "Dr. Gowtham", qual: "MD, DM (Nephro)", dept: "medicine", deptLabel: "Nephrology" },
+  { name: "Dr. Ramesh", qual: "MD Dermatologist", dept: "medicine", deptLabel: "Nephrology & Dermatology" },
+  { name: "Dr. Bharath", qual: "MBBS, MS, GS, MCS (Urologist)", dept: "surgery", deptLabel: "Urology & Genitourinary Surgery" },
+  // Ophthalmology
+  { name: "Dr. Iqbal", qual: "MS (Ophthol)", dept: "surgery", deptLabel: "Ophthalmology" },
+  // ENT
+  { name: "Dr. John Britto J.", qual: "MS (ENT)", dept: "surgery", deptLabel: "ENT" },
+  { name: "Dr. Pradeep Ram", qual: "MBBS, MS ENT", dept: "surgery", deptLabel: "ENT" },
+  // Oncology
+  { name: "Dr. Priyadharshini", qual: "Oncologist", dept: "onco", deptLabel: "Medical Oncology" },
+  { name: "Dr. D. Suresh Kumar", qual: "MS, MCh (Surg Onco)", dept: "onco", deptLabel: "Surgical Oncology" },
+  { name: "Dr. Siva Kumar", qual: "MS, MCh (Surg Onco)", dept: "onco", deptLabel: "Surgical Oncology" },
+  { name: "Dr. Rajkiran", qual: "MS, MCh (Surg Onco)", dept: "onco", deptLabel: "Surgical Oncology" },
+  { name: "Dr. B. Deepika", qual: "MD (Radio Therapy)", dept: "onco", deptLabel: "Radio Oncology" },
+  // Vascular
+  { name: "Dr. Amalorpavanathan", qual: "MCH (Vascular Surgeon)", dept: "surgery", deptLabel: "Vascular Surgery" },
+  { name: "Dr. Elencharalathan", qual: "MS, MCh (Vas Surg)", dept: "surgery", deptLabel: "Vascular Surgery" },
+  { name: "Dr. Sabnam", qual: "MS, MCh (Vas Surg)", dept: "surgery", deptLabel: "Vascular Surgery" },
+  { name: "Dr. Manikandaprabhu", qual: "DNB (Gen Surg), DNB (Vas Surg)", dept: "surgery", deptLabel: "Vascular Surgery" },
+  // Others
+  { name: "Dr. Mohana Priya", qual: "MS, MCh (Endo Surg)", dept: "surgery", deptLabel: "Endocrine Surgery" },
+  { name: "Dr. Vijay Ragavan", qual: "MS, MCh (Plas Surg)", dept: "surgery", deptLabel: "Plastic & Corrective Surgery" },
+  { name: "Dr. Prabhu", qual: "MD (Psychiatry)", dept: "medicine", deptLabel: "Psychiatry & Family Counselling" },
+  { name: "Dr. Roopa Rajavarthini", qual: "MD (Radio Diag)", dept: "medicine", deptLabel: "Radiology" },
+  { name: "Dr. Krishna Kumar", qual: "MD (Anaes)", dept: "medicine", deptLabel: "Anaesthesiology" },
+  { name: "Dr. Chandra Sekar", qual: "MD (Anaes)", dept: "medicine", deptLabel: "Anaesthesiology" },
+  { name: "Dr. S. Sunilkumar", qual: "MD (Anaes)", dept: "medicine", deptLabel: "Anaesthesiology" },
+  { name: "Dr. Dhanalakshmi", qual: "MD (Paed Anaes)", dept: "medicine", deptLabel: "Anaesthesiology" },
+  { name: "Dr. Balaji M.", qual: "MBBS, MEM & Team", dept: "medicine", deptLabel: "Emergency Medicine" },
+];
+
+function getInitials(name) {
+  return name.replace('Dr. ', '').split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase().slice(0, 2);
+}
+
+function renderDoctors(filter) {
+  const list = filter === 'all' ? doctors : doctors.filter(d => d.dept === filter);
+  document.getElementById('doctorList').innerHTML = list.map(d => `
+    <div class="doctor-card">
+      <div class="doc-avatar">${getInitials(d.name)}</div>
+      <div>
+        <div class="doc-name">${d.name}</div>
+        <div class="doc-qual">${d.qual}</div>
+        <div class="doc-dept">${d.deptLabel}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function showDept(dept, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderDoctors(dept);
+}
+
+function submitAppointment() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const dept = document.getElementById('dept').value;
+  const date = document.getElementById('date').value;
+  if (!name || !phone || !dept) { alert('Please fill in your name, phone number, and department.'); return; }
+  const msg = encodeURIComponent(`*Appointment Request – Sri Balaji Hospital*\n\nName: ${name}\nPhone: ${phone}\nDepartment: ${dept}\nDate: ${date || 'Flexible'}\n\nThank you.`);
+  window.open('https://wa.me/918925851875?text=' + msg, '_blank');
+}
+
+renderDoctors('all');
+</script>
 </body>
 </html>
